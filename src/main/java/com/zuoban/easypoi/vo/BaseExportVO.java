@@ -26,6 +26,10 @@ public abstract class BaseExportVO {
         return fileName;
     }
 
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
     public BaseExportVO(List<?> data, String fileName) {
         this.data = data;
         this.fileName = fileName;

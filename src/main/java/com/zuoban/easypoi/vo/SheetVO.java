@@ -18,7 +18,7 @@ public class SheetVO {
      */
     private BaseExportVO exportVO;
 
-    private SheetVO(ExportParams exportParams, BaseExportVO exportVO) {
+    public SheetVO(ExportParams exportParams, BaseExportVO exportVO) {
         this.exportParams = exportParams;
         this.exportVO = exportVO;
     }

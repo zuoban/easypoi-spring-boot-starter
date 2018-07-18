@@ -20,7 +20,7 @@ public class MyExcelExportUtil {
     private MyExcelExportUtil() {
     }
 
-    public static Workbook getWorkbook(ExcelType type, int size) {
+    private static Workbook getWorkbook(ExcelType type, int size) {
         if (ExcelType.HSSF.equals(type)) {
             return new HSSFWorkbook();
         } else if (size < 100000) {
