@@ -15,6 +15,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -106,6 +107,10 @@ public class MyExcelExportUtilTest {
 
         // 输出
         try {
+            File parentFile = new File(fullName).getParentFile();
+            if (!parentFile.exists()) {
+                parentFile.mkdir();
+            }
             workbook.write(new FileOutputStream(fullName));
         } catch (IOException e) {
             e.printStackTrace();
